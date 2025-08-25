@@ -13,5 +13,5 @@ jobs:
           find SOLID -type f -name "Demo*.java" | while read f; do
             d=$(dirname "$f")
             echo "Compiling $f"
-            (cd "$d" && javac "$(basename "$f")")
+            (cd "$d" && javac *.java)
           done

@@ -1,11 +1,15 @@
 
-public class PaymentService {
-    String pay(Payment p){
-        switch (p.provider) {
-            case "CARD": return "Charged card: " + p.amount;
-            case "UPI":  return "Paid via UPI: " + p.amount;
-            case "WALLET": return "Wallet debit: " + p.amount;
-            default: throw new RuntimeException("No provider");
+public class PaymentService 
+{
+    public String pay(Payment p)
+    {
+        try 
+        {
+            return PaymentProvider.valueOf(p.provider).processPayment(p.amount);
+        } 
+        catch (IllegalArgumentException e) 
+        {
+            throw new RuntimeException("No provider");
         }
     }
 }

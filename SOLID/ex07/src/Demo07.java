@@ -1,7 +1,10 @@
-public class Demo07 {
-    public static void main(String[] args) {
-        Machine m = new BasicPrinter();
-        m.print("Hello");
-        m.scan("/tmp/out"); // blows up
+public class Demo07 
+{
+    public static void main(String[] args) 
+    {
+        Printable printer = new BasicPrinter();
+        printer.print("Hello");
+        // printer.scan("/tmp/out");
+        System.out.println("only print fn");
     }
 }

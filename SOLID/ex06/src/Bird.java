@@ -1,5 +1,7 @@
-public class Bird {
-     void fly(){
-         System.out.println("Flap!"); 
-        } 
-    }
+public class Bird implements Flyable 
+{
+    public void fly()
+    {
+        System.out.println("Flap!"); 
+    } 
+}

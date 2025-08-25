@@ -1,0 +1,4 @@
+- SST27-LLD101 is the main repo with BookDatabase as submodule
+- SOLID/ contains ex01-ex10 exercises for SOLID principles practice
+- Use `javac` and `java` commands to run exercises
+- Follow SOLID principles when refactoring code
